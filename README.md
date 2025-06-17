@@ -102,6 +102,15 @@ bash test.sh
 bash train.sh
 ```
 
+* Test all images in a folder
+```bash
+python test_folder.py --folder_path /path/to/images \
+    --checkpoint_path checkpoints/9_12_4_multiscale/epoch_15.pth \
+    --features_list 6 12 18 24 --image_size 518 --depth 9 \
+    --n_ctx 12 --t_n_ctx 4
+```
+The script saves visualization results using the original image resolution.
+
 ### Run with Docker
 Build the image from the provided `Dockerfile`:
 
