@@ -90,6 +90,8 @@ Select the corresponding script and run it (we provide all scripts for datasets 
 ### Custom dataset (optional)
 1. Create a new JSON script in fold [generate_dataset_json](https://github.com/zqhang/AnomalyCLIP/tree/main/generate_dataset_json) according to the fold structure of your own datasets.
 2. Add the related info of your dataset (i.e., dataset name and class names) in script [dataset\.py](https://github.com/zqhang/AnomalyCLIP/blob/main/dataset.py)
+3. For a Japanese example using phone screen crack images, see [docs/phones_dataset_jp.md](docs/phones_dataset_jp.md)
+
 
 ### Run AnomalyCLIP
 * Quick start (use the pre-trained weights)
