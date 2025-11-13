@@ -12,7 +12,7 @@ for i in "${!depth[@]}";do
         base_dir=${depth[i]}_${n_ctx[j]}_${t_n_ctx[0]}_multiscale
         save_dir=./checkpoints/${base_dir}/
         CUDA_VISIBLE_DEVICES=${device} python test.py --dataset mvtec \
-        --data_path /remote-home/iot_zhouqihang/data/mvdataset --save_path ./results/${base_dir}/zero_shot \
+        --data_path /kaggle/input/mvtec-ad --save_path ./results/${base_dir}/zero_shot \
         --checkpoint_path ${save_dir}epoch_15.pth \
          --features_list 24 --image_size 518 --depth ${depth[i]} --n_ctx ${n_ctx[j]} --t_n_ctx ${t_n_ctx[0]}
     wait
