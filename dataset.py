@@ -43,7 +43,7 @@ class Dataset(data.Dataset):
         self.transform = transform
         self.target_transform = target_transform
         self.data_all = []
-        meta_info = json.load(open(f'{self.root}/meta.json', 'r'))
+        meta_info = json.load(open('/kaggle/working/meta.json', 'r'))  # 硬编码为你的meta.json路径
         name = self.root.split('/')[-1]
         meta_info = meta_info[mode]
 
@@ -76,4 +76,5 @@ class Dataset(data.Dataset):
             img_mask) if self.target_transform is not None and img_mask is not None else img_mask
         img_mask = [] if img_mask is None else img_mask
         return {'img': img, 'img_mask': img_mask, 'cls_name': cls_name, 'anomaly': anomaly,
+
                 'img_path': os.path.join(self.root, img_path), "cls_id": self.class_name_map_class_id[cls_name]}    
