@@ -9,7 +9,7 @@ class MVTecSolver(object):
         'tile', 'toothbrush', 'transistor', 'wood', 'zipper',
     ]
 
-    def __init__(self, root='data/mvtec'):
+    def __init__(self, root='/kaggle/input/mvtec-ad'):
         self.root = root
         self.meta_path = f'{root}/meta.json'
 
@@ -49,3 +49,4 @@ class MVTecSolver(object):
 if __name__ == '__main__':
     runner = MVTecSolver(root='/remote-home/iot_zhouqihang/data/mvdataset')
     runner.run()
+
