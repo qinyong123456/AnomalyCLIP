@@ -11,7 +11,7 @@ class MVTecSolver(object):
 
     def __init__(self, root='data/mvtec'):
         self.root = root
-        self.meta_path = f'{root}/meta.json'
+        self.meta_path = '/kaggle/working/meta.json'
 
     def run(self):
         info = dict(train={}, test={})
@@ -49,5 +49,6 @@ class MVTecSolver(object):
 if __name__ == '__main__':
     runner = MVTecSolver(root='/kaggle/input/mvtec-ad')
     runner.run()
+
 
 
